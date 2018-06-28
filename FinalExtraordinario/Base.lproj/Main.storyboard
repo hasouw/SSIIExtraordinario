@@ -191,6 +191,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="4zx-dH-KmG"/>
                     </view>
+                    <connections>
+                        <outlet property="txtEmail" destination="Qhv-a0-AGP" id="1Mw-yJ-dxz"/>
+                        <outlet property="txtPass" destination="yRP-71-Tx3" id="hlq-5F-dZk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UAf-4w-q0E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
