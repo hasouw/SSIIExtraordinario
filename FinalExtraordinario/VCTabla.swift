@@ -23,7 +23,15 @@ class VCTabla: UIViewController, MKMapViewDelegate, UITableViewDelegate, UITable
         refHandle = DataHolder.sharedInstance.firDataBaseRef.child("Coches").observe(DataEventType.value, with: { (snapshot) in
             var arTemp = snapshot.value as? Array<AnyObject>
             
-            let coche0=Coche(valores: arTemp?[0] as! [String: AnyObject]) 
+            if(DataHolder.sharedInstance.arCoches==nill){
+                DataHolder.sharedInstance.arCoches=Array<Coche>()
+            }
+            for co in arTemp! as [AnyObject]{
+                let cochei=Coche(valore: co as! [String:AnyObject])
+                DataHolder.sharedInstance.arCoches?.append(cochei)
+            }
+            
+            self.tbMiTabla?.reloadData()
             
         })
         

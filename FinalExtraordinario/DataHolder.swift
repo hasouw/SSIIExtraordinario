@@ -17,6 +17,7 @@ class DataHolder: NSObject {
     var numeroCeldasColeccion:UInt=20;
     var locationAdmin:LocationAdmin?
     var firDataBaseRef: FIRDatabaseReference!
+    var arCoches:Array<Coche>?
     
     func initLocationAdmin(){
         locationAdmin=LocationAdmin()
