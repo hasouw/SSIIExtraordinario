@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class VCRegister: UIViewController {
     
@@ -24,6 +25,16 @@ class VCRegister: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func accionBotonRegistrar(){
+        Auth.auth().createUser(withEmail: (txtEmail?.text)!, password: (txtPass?.text)!) { (user, error) in
+            if (error==nil){
+                self.performSegue(withIdentifier: "trregistro", sender: self)
+            }else{
+                print("Error en registro: ", error!)
+            }        }
+        
     }
     
 
