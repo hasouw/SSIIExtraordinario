@@ -17,6 +17,7 @@
 		9563C27320E4CA42009EF9B3 /* FinalExtraordinarioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9563C27220E4CA42009EF9B3 /* FinalExtraordinarioTests.swift */; };
 		9563C27E20E4CA42009EF9B3 /* FinalExtraordinarioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9563C27D20E4CA42009EF9B3 /* FinalExtraordinarioUITests.swift */; };
 		9563C28C20E4CE84009EF9B3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9563C28B20E4CE84009EF9B3 /* GoogleService-Info.plist */; };
+		95B9A31920E4D54800181121 /* DataHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B9A31820E4D54800181121 /* DataHolder.swift */; };
 		B4A66A41B5083C2FDDA1FB15 /* Pods_FinalExtraordinarioUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DC9F006742B67A294C86A38 /* Pods_FinalExtraordinarioUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		9563C27D20E4CA42009EF9B3 /* FinalExtraordinarioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalExtraordinarioUITests.swift; sourceTree = "<group>"; };
 		9563C27F20E4CA42009EF9B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9563C28B20E4CE84009EF9B3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		95B9A31820E4D54800181121 /* DataHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHolder.swift; sourceTree = "<group>"; };
 		AF217427A8BD8F177B27F61F /* Pods-FinalExtraordinario.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalExtraordinario.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinalExtraordinario/Pods-FinalExtraordinario.debug.xcconfig"; sourceTree = "<group>"; };
 		BC0F0C271EA8666C0019A5A3 /* Pods-FinalExtraordinarioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalExtraordinarioTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinalExtraordinarioTests/Pods-FinalExtraordinarioTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D4F02C9A823FFA3B9CA62ED9 /* Pods-FinalExtraordinarioUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalExtraordinarioUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinalExtraordinarioUITests/Pods-FinalExtraordinarioUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				9563C26420E4CA42009EF9B3 /* Assets.xcassets */,
 				9563C26620E4CA42009EF9B3 /* LaunchScreen.storyboard */,
 				9563C26920E4CA42009EF9B3 /* Info.plist */,
+				95B9A31820E4D54800181121 /* DataHolder.swift */,
 			);
 			path = FinalExtraordinario;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9563C26020E4CA40009EF9B3 /* ViewController.swift in Sources */,
+				95B9A31920E4D54800181121 /* DataHolder.swift in Sources */,
 				9563C25E20E4CA40009EF9B3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -640,7 +644,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FinalExtraordinario/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "u-tad.FinalExtraordinario";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -658,7 +665,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FinalExtraordinario/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "u-tad.FinalExtraordinario";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -675,7 +685,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FinalExtraordinarioTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "u-tad.FinalExtraordinarioTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -692,7 +706,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FinalExtraordinarioTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "u-tad.FinalExtraordinarioTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -708,7 +726,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FinalExtraordinarioUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "u-tad.FinalExtraordinarioUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -724,7 +746,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FinalExtraordinarioUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "u-tad.FinalExtraordinarioUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
