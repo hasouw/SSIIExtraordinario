@@ -116,7 +116,8 @@
                         <viewLayoutGuide key="safeArea" id="ytb-KM-Mby"/>
                     </view>
                     <connections>
-                        <outlet property="MiMapa" destination="0vF-eH-lkp" id="7Rw-IW-oEX"/>
+                        <outlet property="MiMapa" destination="0vF-eH-lkp" id="9rR-Ql-16G"/>
+                        <outlet property="tbMiTabla" destination="EYJ-GG-Um8" id="eBy-Ap-Dc0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Itl-aZ-PpM" userLabel="First Responder" sceneMemberID="firstResponder"/>

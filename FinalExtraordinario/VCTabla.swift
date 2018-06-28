@@ -11,10 +11,18 @@ import MapKit
 
 class VCTabla: UIViewController, MKMapViewDelegate{
     
+    @IBOutlet var tbMiTabla:UITableView?    
     @IBOutlet var MiMapa:MKMapView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        refHandle = DataHolder.sharedInstance.firDataBaseRef.child("Coches").observe(DataEventType.value, with: { (snapshot) in
+            let postDict = snapshot.value as? [String : AnyObject] ?? [:]
+            // ...
+        })
         
         MiMapa?.showsUserLocation = true
         
