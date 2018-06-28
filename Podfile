@@ -8,6 +8,7 @@ target 'FinalExtraordinario' do
   # Pods for FinalExtraordinario
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
+pod 'Firebase/Database'
 
   target 'FinalExtraordinarioTests' do
     inherit! :search_paths
