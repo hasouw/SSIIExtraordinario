@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import FirebaseDatabase
 
-class VCTabla: UIViewController, MKMapViewDelegate{
+class VCTabla: UIViewController, MKMapViewDelegate, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var tbMiTabla:UITableView?    
     @IBOutlet var MiMapa:MKMapView?
@@ -21,8 +21,9 @@ class VCTabla: UIViewController, MKMapViewDelegate{
         
         
         refHandle = DataHolder.sharedInstance.firDataBaseRef.child("Coches").observe(DataEventType.value, with: { (snapshot) in
-            print("LO DESCARGADO ES, ", snapshot.value)
-            //let postDict = snapshot.value as? [String : AnyObject] ?? [:]
+            var arTemp = snapshot.value as? Array<AnyObject>
+            
+            let coche0=Coche(valores: arTemp?[0] as! [String: AnyObject]) 
             
         })
         
