@@ -25,6 +25,7 @@ class DataHolder: NSObject {
     
     func initFireBase(){
         FIRApp.configure()
+        firDataBaseRef = FIRDATABASE.database().reference()
     }
 
 }
