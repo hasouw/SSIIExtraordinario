@@ -59,7 +59,7 @@
                                 <state key="normal" title="LogIn"/>
                                 <connections>
                                     <action selector="accionBotonLogear" destination="BYZ-38-t0r" eventType="touchUpInside" id="OIm-yo-gfO"/>
-                                    <segue destination="hPZ-FF-D6N" kind="show" id="orQ-kl-e8K"/>
+                                    <segue destination="hPZ-FF-D6N" kind="show" identifier="tran1" id="orQ-kl-e8K"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyL-yR-jxE">
@@ -67,7 +67,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Register"/>
                                 <connections>
-                                    <segue destination="rTD-qv-op8" kind="show" id="gcd-N0-pfX"/>
+                                    <segue destination="rTD-qv-op8" kind="show" identifier="trregistro" id="gcd-N0-pfX"/>
                                 </connections>
                             </button>
                         </subviews>
