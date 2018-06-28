@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     @IBOutlet var btnLogear:UIButton?
     @IBOutlet var txtUsuario:UITextField?
     @IBOutlet var txtPass:UITextField?
-    @IBOutlet var txtVconsola:UITextView?
 
     override func viewDidLoad() {
         super.viewDidLoad()

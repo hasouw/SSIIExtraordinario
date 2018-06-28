@@ -58,6 +58,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="LogIn"/>
                                 <connections>
+                                    <action selector="accionBotonLogear" destination="BYZ-38-t0r" eventType="touchUpInside" id="OIm-yo-gfO"/>
                                     <segue destination="hPZ-FF-D6N" kind="show" id="orQ-kl-e8K"/>
                                 </connections>
                             </button>
@@ -135,6 +136,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Register"/>
                                 <connections>
+                                    <action selector="accionBotonRegistrar" destination="rTD-qv-op8" eventType="touchUpInside" id="dvG-2H-57J"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="ZXS-6L-w0K"/>
                                 </connections>
                             </button>
