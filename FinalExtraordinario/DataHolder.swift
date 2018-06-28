@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
+
 
 class DataHolder: NSObject {
     static let sharedInstance:DataHolder=DataHolder()
     
     var numeroCeldasColeccion:UInt=20;
     var locationAdmin:LocationAdmin?
+    var firDataBaseRef: FIRDatabaseReference!
     
     func initLocationAdmin(){
         locationAdmin=LocationAdmin()
