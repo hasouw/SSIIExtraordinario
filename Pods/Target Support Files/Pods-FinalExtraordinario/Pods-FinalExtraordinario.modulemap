@@ -1,0 +1,6 @@
+framework module Pods_FinalExtraordinario {
+  umbrella header "Pods-FinalExtraordinario-umbrella.h"
+
+  export *
+  module * { export * }
+}
