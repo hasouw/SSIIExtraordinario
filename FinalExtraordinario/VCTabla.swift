@@ -23,7 +23,7 @@ class VCTabla: UIViewController, MKMapViewDelegate, UITableViewDelegate, UITable
         refHandle = DataHolder.sharedInstance.firDataBaseRef.child("Coches").observe(DataEventType.value, with: { (snapshot) in
             var arTemp = snapshot.value as? Array<AnyObject>
             
-            if(DataHolder.sharedInstance.arCoches==nill){
+            if(DataHolder.sharedInstance.arCoches==nil){
                 DataHolder.sharedInstance.arCoches=Array<Coche>()
             }
             for co in arTemp! as [AnyObject]{
@@ -45,6 +45,24 @@ class VCTabla: UIViewController, MKMapViewDelegate, UITableViewDelegate, UITable
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if(DataHolder.sharedInstance.arCoches==nil){
+            return 0
+        }else{
+            return (DataHolder.sharedInstance.arCoches?.count)!
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell:TVCMicelda = tableView.dequeueReusableCell(withIdentifier: "micelda1") as! TVCMiCelda
+        
+        let cochei:Coche=DataHolder.sharedInstance.arCoches![indexPath.row]
+        cell.lblMarca?.text=cochei.sMarca
+        cell.lblModelo?.text=cochei.sModelo
+        cell.lblTipo?.text=cochei.sTipo
     }
     
     func centralizarEnPosicion(coordenada:CLLocationCoordinate2D)  {
