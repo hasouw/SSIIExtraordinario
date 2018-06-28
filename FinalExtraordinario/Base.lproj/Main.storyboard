@@ -138,7 +138,6 @@
                                 <state key="normal" title="Register"/>
                                 <connections>
                                     <action selector="accionBotonRegistrar" destination="rTD-qv-op8" eventType="touchUpInside" id="dvG-2H-57J"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="ZXS-6L-w0K"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJL-EB-xBZ">
@@ -219,7 +218,4 @@
             <point key="canvasLocation" x="117.59999999999999" y="931.48425787106453"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="73c-N8-T5o"/>
-    </inferredMetricsTieBreakers>
 </document>

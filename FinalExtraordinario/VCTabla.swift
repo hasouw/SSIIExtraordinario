@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import FirebaseDatabase
 
 class VCTabla: UIViewController, MKMapViewDelegate{
     
@@ -20,8 +21,9 @@ class VCTabla: UIViewController, MKMapViewDelegate{
         
         
         refHandle = DataHolder.sharedInstance.firDataBaseRef.child("Coches").observe(DataEventType.value, with: { (snapshot) in
-            let postDict = snapshot.value as? [String : AnyObject] ?? [:]
-            // ...
+            print("LO DESCARGADO ES, ", snapshot.value)
+            //let postDict = snapshot.value as? [String : AnyObject] ?? [:]
+            
         })
         
         MiMapa?.showsUserLocation = true
